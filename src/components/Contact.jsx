@@ -8,7 +8,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-10 text-center text-6xl font-bold"
+        className="mt-20 mb-10 text-center text-6xl font-bold bg-gradient-to-r from-blue-600 via-pink-400 to-orange-600 text-transparent bg-clip-text"
       >
         Get in Touch
       </motion.h1>
@@ -18,7 +18,7 @@ const Contact = () => {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
           href="#"
-          className="my-4"
+          className="my-4 text-2xl"
         >
           {CONTACT.email}
         </motion.p>
@@ -26,7 +26,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1 }}
-          className="my-4"
+          className="my-4 text-xl"
         >
           {CONTACT.phoneNo}
         </motion.p>
