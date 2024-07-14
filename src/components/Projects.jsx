@@ -1,4 +1,4 @@
-import { PROJECTS } from "../constants";
+import { PROJECTS } from "../constants/constants";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -8,7 +8,7 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl"
+        className="my-20 text-center text-6xl font-bold"
       >
         Projects
       </motion.h1>
@@ -40,7 +40,7 @@ const Projects = () => {
               {project.technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-blue-600"
+                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-yellow-600"
                 >
                   {tech}
                 </span>
