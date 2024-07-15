@@ -19,7 +19,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: -15 }}
           transition={{ duration: 1 }}
           href="https://www.linkedin.com/in/dilanchoksi/"
-          className="flex items-center justify-center gap-4 text-lg rounded-full p-1.5 bg-[#004182] w-32 mb-3.5 mx-auto border-2 border-white"
+          className="flex items-center justify-center gap-4 text-lg rounded-full p-1.5 bg-[#004182] w-32 mb-6 mx-auto border-2 border-white"
           target="_blank"
         >
           <FaLinkedin></FaLinkedin>
@@ -31,15 +31,7 @@ const Contact = () => {
           transition={{ duration: 1 }}
           className="my-2 text-xl"
         >
-          {CONTACT.email}
-        </motion.p>
-        <motion.p
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 15 }}
-          transition={{ duration: 1 }}
-          className="my-2 text-lg"
-        >
-          {CONTACT.phoneNo}
+          {CONTACT.email} • {CONTACT.phoneNo}
         </motion.p>
       </div>
     </div>
