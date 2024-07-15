@@ -6,10 +6,8 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
-// add Linkedin
-// fixed NavBar? (navbar like dylsub's)
-// add navbar routing
 // add NAV animations (hover)
+// add FramerMotion to navbar (zoom in on load)
 
 const App = () => {
   return (
@@ -18,14 +16,8 @@ const App = () => {
         <div className="relative h-full w-full bg-black"></div>
       </div>
       <div className="container mx-auto px-8">
-        <div className="h-screen flex flex-col">
-          <div>
-            <Navbar />
-          </div>
-          <div className="flex-1">
-            <Hero />
-          </div>
-        </div>
+        <Navbar />
+        <Hero />
         <About />
         <Skills />
         <Experience />

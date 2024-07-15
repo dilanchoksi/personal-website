@@ -9,7 +9,7 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-slate-800 lg:mb-35 h-full">
+    <div className="border-b border-slate-800 lg:mb-35 h-screen mt-72">
       <div className="w-full">
         <div className="flex-col items-center lg:items-start">
           <motion.h1
