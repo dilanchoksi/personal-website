@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex items-center justify-between fixed w-full top-0 left-0 px-24 z-40 __cust_trans duration-500 ${
+      className={`flex items-center justify-between fixed w-full top-0 left-0 px-24 z-40 __cust_trans duration-1000 ${
         scrolled ? "bg-white opacity-95 py-2" : "bg-transparent py-10"
       }`}
     >
@@ -38,7 +38,7 @@ const Navbar = () => {
       </div>
       <div className="flex gap-4 z-50">
         <ul
-          className={`flex items-center justify-center gap-4 font-sans font-bold duration-500 ${
+          className={`flex items-center justify-center gap-4 font-sans font-bold duration-1000 ${
             scrolled ? "text-black" : ""
           }`}
         >
@@ -59,7 +59,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div
-          className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 z-50 duration-500 ${
+          className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 z-50 duration-1000 ${
             scrolled ? "bg-black text-white" : "bg-white text-black"
           }`}
         >
