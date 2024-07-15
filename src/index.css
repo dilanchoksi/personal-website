@@ -9,12 +9,5 @@
 
 :root {
   font-family: "DM Sans", sans-serif;
-}
-
-.__cust_trans {
-  .transition {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
+  scroll-behavior: smooth;
 }

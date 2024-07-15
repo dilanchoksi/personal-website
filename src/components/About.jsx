@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="border-b border-slate-800 pb-20">
+    <div id="about" className="border-b border-slate-800 pt-1 pb-20">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -18,10 +18,14 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
-          className="w-full lg:w-1/2 lg:p-8"
+          className="w-full lg:w-1/2 lg:pl-8 xl:pl-28"
         >
-          <div className="flex items-center justify-center">
-            <img src={aboutImg} alt="" className="rounded-full border-8" />
+          <div className="flex items-center justify-center xl:w-96 2xl:w-auto">
+            <img
+              src={aboutImg}
+              alt=""
+              className="rounded-full border-8 md:w-96 md:mb-10 lg:w-96"
+            />
           </div>
         </motion.div>
         <motion.div
@@ -31,7 +35,9 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="max-w-xl text-xl xl:text-2xl p-8">{ABOUT_TEXT}</p>
+            <p className="max-w-xl text-xl pt-10 text-center 2xl:text-2xl 2xl:p-8">
+              {ABOUT_TEXT}
+            </p>
           </div>
         </motion.div>
       </div>

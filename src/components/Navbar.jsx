@@ -25,8 +25,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex items-center justify-between fixed w-full top-0 left-0 px-24 z-40 __cust_trans duration-1000 ${
-        scrolled ? "bg-white opacity-95 py-2" : "bg-transparent py-10"
+      className={`flex items-center justify-between fixed w-full top-0 left-0 md:px-6 lg:px-16 px-24 z-40 __cust_trans duration-1000 ${
+        scrolled ? "bg-zinc-300 opacity-95 py-2" : "bg-transparent py-10"
       }`}
     >
       <div className="flex flex-shrink-0 items-center z-50">
@@ -43,19 +43,19 @@ const Navbar = () => {
           }`}
         >
           <li>
-            <a href="">ABOUT</a>
+            <a href="#about">ABOUT</a>
           </li>
           <li>
-            <a href="">SKILLS</a>
+            <a href="#skills">SKILLS</a>
           </li>
           <li>
-            <a href="">EXPERIENCE</a>
+            <a href="#experience">EXPERIENCE</a>
           </li>
           <li>
-            <a href="">PROJECTS</a>
+            <a href="#projects">PROJECTS</a>
           </li>
           <li>
-            <a href="">CONTACT</a>
+            <a href="#contact">CONTACT</a>
           </li>
         </ul>
         <div
@@ -63,9 +63,27 @@ const Navbar = () => {
             scrolled ? "bg-black text-white" : "bg-white text-black"
           }`}
         >
-          <FaLinkedin />
-          <FaGithub />
-          <FaInstagram />
+          <a
+            href="https://www.linkedin.com/in/dilanchoksi/"
+            className="hover:text-[#0a66c2]"
+            target="_blank"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/dilanchoksi/"
+            className="hover:text-[#7C007C]"
+            target="_blank"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://instagram.com/dilanchoksi_/"
+            className="hover:text-[#D62976]"
+            target="_blank"
+          >
+            <FaInstagram />
+          </a>
         </div>
       </div>
     </nav>

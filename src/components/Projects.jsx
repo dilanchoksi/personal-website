@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div className="border-b border-slate-800 pb-20">
+    <div id="projects" className="border-b border-slate-800 pt-1 pb-20">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -26,7 +26,7 @@ const Projects = () => {
                 alt={project.title}
                 width={150}
                 height={150}
-                className="mb-6 rounded"
+                className="mb-6 rounded border-white border-2"
               />
             </motion.div>
             <motion.div
