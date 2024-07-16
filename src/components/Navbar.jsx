@@ -3,9 +3,12 @@ import logo from "../assets/logo.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,25 +26,47 @@ const Navbar = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav
-      className={`flex items-center justify-between fixed w-full top-0 left-0 md:px-6 lg:px-16 px-24 z-40 __cust_trans duration-1000 ${
-        scrolled ? "bg-zinc-300 opacity-95 py-2" : "bg-transparent py-10"
-      }`}
+      className={` ${
+        menuOpen
+          ? "flex flex-col w-44 fixed right-0 bg-white h-screen z-50 p-8 text-black font-bold"
+          : `flex items-center fixed justify-between w-full top-0 left-0 md:px-6 lg:px-16 px-24 z-40 duration-1000 ${
+              scrolled ? "bg-white opacity-95 py-2" : "bg-transparent py-10"
+            }`
+      }    `}
     >
       <div className="flex flex-shrink-0 items-center z-50">
-        <img
-          className={`mx-2 w-28 duration-700 ${scrolled ? "invert" : ""}`}
-          src={logo}
-          alt=""
-        />
+        <a href="#home">
+          <img
+            className={`mx-2 w-28 duration-700 ${scrolled ? "invert" : ""} ${
+              menuOpen ? "hidden" : ""
+            }`}
+            src={logo}
+            alt=""
+          />
+        </a>
       </div>
       <div className="flex gap-4 z-50">
         <ul
-          className={`flex items-center justify-center gap-4 font-sans font-bold duration-1000 ${
-            scrolled ? "text-black" : ""
-          }`}
+          className={` ${
+            menuOpen
+              ? `flex flex-col gap-4`
+              : `hidden md:flex items-center justify-center gap-4 font-sans font-bold duration-1000 ${
+                  scrolled ? "text-black" : ""
+                }`
+          } md:flex  `}
         >
+          <button
+            className={` ${menuOpen ? "" : "hidden"}`}
+            onClick={toggleMenu}
+          >
+            <FaTimes></FaTimes>
+          </button>
           <li>
             <a href="#about">ABOUT</a>
           </li>
@@ -57,34 +82,42 @@ const Navbar = () => {
           <li>
             <a href="#contact">CONTACT</a>
           </li>
+          <div
+            className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 z-50 duration-1000 ${
+              menuOpen
+                ? "bg-black text-white"
+                : `${scrolled ? "bg-black text-white" : "bg-white text-black"}`
+            } `}
+          >
+            <a
+              href="https://www.linkedin.com/in/dilanchoksi/"
+              className="hover:text-[#0a66c2]"
+              target="_blank"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/dilanchoksi/"
+              className="hover:text-[#7C007C]"
+              target="_blank"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://instagram.com/dilanchoksi_/"
+              className="hover:text-[#D62976]"
+              target="_blank"
+            >
+              <FaInstagram />
+            </a>
+          </div>
         </ul>
-        <div
-          className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 z-50 duration-1000 ${
-            scrolled ? "bg-black text-white" : "bg-white text-black"
-          }`}
+        <button
+          className={` md:hidden ${menuOpen ? "hidden" : ""}`}
+          onClick={toggleMenu}
         >
-          <a
-            href="https://www.linkedin.com/in/dilanchoksi/"
-            className="hover:text-[#0a66c2]"
-            target="_blank"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/dilanchoksi/"
-            className="hover:text-[#7C007C]"
-            target="_blank"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://instagram.com/dilanchoksi_/"
-            className="hover:text-[#D62976]"
-            target="_blank"
-          >
-            <FaInstagram />
-          </a>
-        </div>
+          <FaBars></FaBars>
+        </button>
       </div>
     </nav>
   );
