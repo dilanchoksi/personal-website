@@ -32,41 +32,25 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` ${
-        menuOpen
-          ? "flex flex-col w-44 fixed right-0 bg-white h-screen z-50 p-8 text-black font-bold"
-          : `flex items-center fixed justify-between w-full top-0 left-0 md:px-6 lg:px-16 px-24 z-40 duration-1000 ${
-              scrolled ? "bg-white opacity-95 py-2" : "bg-transparent py-10"
-            }`
-      }    `}
+      className={`bg-yellow-500 md:flex md:items-center md:justify-between md:fixed md:w-full md:top-0 md:left-0 md:px-6 md:z-40 md:duration-1000 md:bg-transparent md:py-10 ${
+        scrolled ? "md:bg-zinc-300 md:opacity-95 md:py-2" : ""
+      }`}
     >
-      <div className="flex flex-shrink-0 items-center z-50">
-        <a href="#home">
-          <img
-            className={`mx-2 w-28 duration-700 ${scrolled ? "invert" : ""} ${
-              menuOpen ? "hidden" : ""
-            }`}
-            src={logo}
-            alt=""
-          />
-        </a>
+      <div className="md:flex md:flex-shrink-0 md:items-center md:z-50">
+        <img
+          className={`md:mx-2 md:w-28 md:duration-700 ${
+            scrolled ? "md:invert" : ""
+          }`}
+          src={logo}
+          alt=""
+        />
       </div>
-      <div className="flex gap-4 z-50">
+      <div className="md:flex md:gap-4 md:z-50">
         <ul
-          className={` ${
-            menuOpen
-              ? `flex flex-col gap-4`
-              : `hidden md:flex items-center justify-center gap-4 font-sans font-bold duration-1000 ${
-                  scrolled ? "text-black" : ""
-                }`
-          } md:flex  `}
+          className={`md:flex md:items-center md:justify-center md:gap-4 md:font-sans md:font-bold md:duration-1000 ${
+            scrolled ? "md:invert" : ""
+          }`}
         >
-          <button
-            className={` ${menuOpen ? "" : "hidden"}`}
-            onClick={toggleMenu}
-          >
-            <FaTimes></FaTimes>
-          </button>
           <li>
             <a href="#about">ABOUT</a>
           </li>
@@ -82,42 +66,34 @@ const Navbar = () => {
           <li>
             <a href="#contact">CONTACT</a>
           </li>
-          <div
-            className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 z-50 duration-1000 ${
-              menuOpen
-                ? "bg-black text-white"
-                : `${scrolled ? "bg-black text-white" : "bg-white text-black"}`
-            } `}
-          >
-            <a
-              href="https://www.linkedin.com/in/dilanchoksi/"
-              className="hover:text-[#0a66c2]"
-              target="_blank"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://github.com/dilanchoksi/"
-              className="hover:text-[#7C007C]"
-              target="_blank"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://instagram.com/dilanchoksi_/"
-              className="hover:text-[#D62976]"
-              target="_blank"
-            >
-              <FaInstagram />
-            </a>
-          </div>
         </ul>
-        <button
-          className={` md:hidden ${menuOpen ? "hidden" : ""}`}
-          onClick={toggleMenu}
+        <div
+          className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 z-50 duration-1000 bg-white text-black ${
+            scrolled ? "invert" : ""
+          }`}
         >
-          <FaBars></FaBars>
-        </button>
+          <a
+            href="https://www.linkedin.com/in/dilanchoksi/"
+            className="hover:text-[#0a66c2]"
+            target="_blank"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/dilanchoksi/"
+            className="hover:text-[#7C007C]"
+            target="_blank"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://instagram.com/dilanchoksi_/"
+            className="hover:text-[#D62976]"
+            target="_blank"
+          >
+            <FaInstagram />
+          </a>
+        </div>
       </div>
     </nav>
   );
