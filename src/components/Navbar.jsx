@@ -32,8 +32,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex items-center z-40 justify-between fixed w-full top-0 left-0 px-6 lg:px-16 xl:px-24 duration-1000 ${
-        scrolled ? "bg-zinc-300 py-2" : "bg-transparent py-10"
+      className={`flex items-center z-40 justify-between fixed w-full top-0 left-0 px-6 lg:px-16 xl:px-24 duration-500 ${
+        scrolled ? "bg-zinc-300 py-2 md:py-0" : "bg-transparent py-6"
       }`}
     >
       <div className="flex flex-shrink-0 items-center">
@@ -59,33 +59,59 @@ const Navbar = () => {
       </button>
 
       <div
-        className={`border-y-2 md:border-none border-white flex gap-4 fixed md:static flex-col md:flex-row flex-shrink-0 w-screen md:w-auto left-0 items-center py-4 md:py-auto duration-1000 md:opacity-100 ${
+        className={`border-y-2 md:border-none border-white text-xl md:text-base flex gap-3 md:gap-4 fixed md:static flex-col md:flex-row flex-shrink-0 w-screen md:w-auto left-0 items-center py-4 md:py-auto duration-500 md:opacity-100 ${
           menuOpen ? "opacity-[.97]" : "opacity-0"
         } ${
           scrolled
             ? "top-11 bg-zinc-300 md:bg-transparent"
-            : "top-[108px] text-white bg-black md:bg-transparent"
+            : "top-[76px] text-white bg-black md:bg-transparent"
         } `}
       >
         <ul
-          className={`flex items-center justify-center gap-0 font-sans font-bold duration-1000 flex-col md:flex-row md:gap-4 ${
+          className={`flex items-center justify-center gap-2 font-sans font-bold duration-1000 flex-col md:flex-row md:gap-4 ${
             scrolled ? "text-black" : ""
           }`}
         >
           <li>
-            <a href="#about">ABOUT</a>
+            <a
+              href="#about"
+              onClick={toggleMenu}
+              className="hover:font-black duration-1000 transition-all"
+            >
+              ABOUT
+            </a>
           </li>
           <li>
-            <a href="#skills">SKILLS</a>
+            <a href="#skills" onClick={toggleMenu} className="hover:font-black">
+              SKILLS
+            </a>
           </li>
           <li>
-            <a href="#experience">EXPERIENCE</a>
+            <a
+              href="#experience"
+              onClick={toggleMenu}
+              className="hover:font-black"
+            >
+              EXPERIENCE
+            </a>
           </li>
           <li>
-            <a href="#projects">PROJECTS</a>
+            <a
+              href="#projects"
+              onClick={toggleMenu}
+              className="hover:font-black"
+            >
+              PROJECTS
+            </a>
           </li>
           <li>
-            <a href="#contact">CONTACT</a>
+            <a
+              href="#contact"
+              onClick={toggleMenu}
+              className="hover:font-black"
+            >
+              CONTACT
+            </a>
           </li>
         </ul>
         <div

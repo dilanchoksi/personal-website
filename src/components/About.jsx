@@ -9,7 +9,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="mt-20 mb-10 text-center text-6xl font-bold bg-gradient-to-r from-blue-600 via-pink-400 to-orange-600 text-transparent bg-clip-text"
+        className="mt-20 mb-10 text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-pink-400 to-orange-600 text-transparent bg-clip-text"
       >
         About Me
       </motion.h1>
@@ -24,7 +24,7 @@ const About = () => {
             <img
               src={aboutImg}
               alt=""
-              className="rounded-full border-8 md:w-96 md:mb-10 lg:w-96"
+              className="rounded-full border-8 w-72 md:w-96 md:mb-10 lg:w-96"
             />
           </div>
         </motion.div>
@@ -35,7 +35,7 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="max-w-xl text-xl pt-10 text-center 2xl:text-2xl 2xl:p-8">
+            <p className="max-w-xl sm:text-lg leading-[19px] md:text-xl pt-10 text-center 2xl:text-2xl 2xl:p-8">
               {ABOUT_TEXT}
             </p>
           </div>

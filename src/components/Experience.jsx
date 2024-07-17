@@ -8,7 +8,7 @@ const Experience = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-6xl font-bold bg-gradient-to-r from-blue-600 via-pink-400 to-orange-600 text-transparent bg-clip-text"
+        className="my-20 text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-pink-400 to-orange-600 text-transparent bg-clip-text"
       >
         Experience
       </motion.h1>
@@ -36,7 +36,7 @@ const Experience = () => {
             {experience.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="mr-2 rounded inline-block bg-neutral-900 px-2 py-1 text-sm font-medium text-yellow-600 hover:text-neutral-900 hover:bg-yellow-600 duration-300 hover:-translate-y-1"
+                className="cursor-default mr-2 rounded inline-block bg-neutral-900 px-2 py-1 text-sm font-medium text-yellow-600 hover:text-neutral-900 hover:bg-yellow-600 hover:-translate-y-1"
               >
                 {tech}
               </span>

@@ -19,7 +19,7 @@ const Hero = () => {
             variants={container(0)}
             initial="hidden"
             animate="visible"
-            className="pt-10 mb-10 text-6xl font-bold lg:text-9xl"
+            className="md:pt-10 mb-10 text-6xl font-bold lg:text-9xl"
           >
             Hi, I'm Dilan Choksi.
           </motion.h1>
