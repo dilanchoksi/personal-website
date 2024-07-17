@@ -54,14 +54,12 @@ const Navbar = () => {
         ></FaBars>
         <FaTimes
           onClick={toggleMenu}
-          className={`relative z-50 text-white ${
-            menuOpen ? "text-black" : "hidden"
-          } `}
+          className={`relative z-50 ${menuOpen ? "text-black" : "hidden"} `}
         ></FaTimes>
       </button>
 
       <div
-        className={` flex sm:top-11 gap-4 bg-zinc-300 opacity-95 sm:fixed sm:flex-col sm:w-screen sm:left-0 sm:items-center py-4 duration-200 ${
+        className={` flex sm:top-11 gap-4 bg-zinc-300 sm:fixed sm:flex-col sm:w-screen sm:left-0 sm:items-center py-4 duration-500 ${
           menuOpen ? "opacity-95" : "opacity-0"
         }`}
       >
