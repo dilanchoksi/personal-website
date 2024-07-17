@@ -32,21 +32,42 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex items-center justify-between fixed w-full top-0 left-0 md:px-6 lg:px-16 px-24 z-40 __cust_trans duration-1000 ${
-        scrolled ? "bg-zinc-300 opacity-95 py-2" : "bg-transparent py-10"
+      className={`flex items-center z-40 justify-between fixed w-full top-0 left-0 px-6 lg:px-16 xl:px-24 duration-1000 ${
+        scrolled || menuOpen ? "bg-zinc-300 py-2" : "bg-transparent py-10"
       }`}
     >
-      <div className="flex flex-shrink-0 items-center z-50">
+      <div className="flex flex-shrink-0 items-center">
         <img
-          className={`mx-2 w-28 duration-700 ${scrolled ? "invert" : ""}`}
+          className={`mx-2 h-7 duration-700 ${
+            scrolled || menuOpen ? "invert" : ""
+          }`}
           src={logo}
           alt=""
         />
       </div>
-      <div className="flex gap-4 z-50">
+      <button>
+        <FaBars
+          onClick={toggleMenu}
+          className={`relative z-50 ${
+            menuOpen ? "hidden" : `${scrolled ? "text-black" : "text-white"}`
+          } `}
+        ></FaBars>
+        <FaTimes
+          onClick={toggleMenu}
+          className={`relative z-50 text-white ${
+            menuOpen ? "text-black" : "hidden"
+          } `}
+        ></FaTimes>
+      </button>
+
+      <div
+        className={` flex sm:top-11 gap-4 bg-zinc-300 opacity-95 sm:fixed sm:flex-col sm:w-screen sm:left-0 sm:items-center py-4 duration-200 ${
+          menuOpen ? "opacity-95" : "opacity-0"
+        }`}
+      >
         <ul
-          className={`flex items-center justify-center gap-4 font-sans font-bold duration-1000 ${
-            scrolled ? "text-black" : ""
+          className={`flex items-center justify-center gap-0 font-sans font-bold duration-1000 sm:flex-col sm:gap-4 ${
+            scrolled || menuOpen ? "text-black" : ""
           }`}
         >
           <li>
@@ -66,8 +87,10 @@ const Navbar = () => {
           </li>
         </ul>
         <div
-          className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 z-50 duration-1000 ${
-            scrolled ? "bg-black text-white" : "bg-white text-black"
+          className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 duration-1000 sm:w-28 ${
+            menuOpen || !scrolled
+              ? "bg-white text-black border-black border-2"
+              : "md:bg-black md:text-white md:border-white border-2"
           }`}
         >
           <a
