@@ -1,8 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Skills from "./components/Skills";
-import Skills_V2 from "./components/Skills_V2";
+import Languages from "./components/Languages";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -20,8 +19,7 @@ const App = () => {
         <Navbar />
         <Hero />
         <About />
-        <Skills />
-        <Skills_V2 />
+        <Languages />
         <Experience />
         <Projects />
         <Contact />

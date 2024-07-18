@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +32,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav
+    <motion.nav
+      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: -100 }}
+      transition={{ duration: 0.5 }}
       className={`flex items-center z-40 justify-between fixed w-full top-0 left-0 px-6 lg:px-16 xl:px-24 duration-500 ${
         scrolled ? "bg-zinc-300 py-2 md:py-0" : "bg-transparent py-6"
       }`}
@@ -142,7 +146,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

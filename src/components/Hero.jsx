@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="border-b border-slate-800 h-screen pt-40 md:pt-80 lg:pl-10 lg:pt-80 xl:pt-36 2xl:pt-72"
+      className="border-b border-slate-800 h-screen pt-40 md:pt-40 lg:pl-10 xl:pt-36 2xl:pt-72"
     >
       <div className="w-full">
         <div className="flex-col items-center lg:items-start">
@@ -19,7 +19,7 @@ const Hero = () => {
             variants={container(0)}
             initial="hidden"
             animate="visible"
-            className="md:pt-10 mb-10 text-6xl font-bold lg:text-9xl"
+            className="md:pt-10 mb-2 text-6xl font-bold lg:text-8xl"
           >
             Hi, I'm Dilan Choksi.
           </motion.h1>

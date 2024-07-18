@@ -8,6 +8,30 @@ export const HERO_CONTENT = `I am a passionate full stack developer with a knack
 export const ABOUT_TEXT =
   "I am an undergraduate student studying Computer Science and Statistics at the University of Illinois Urbana-Champaign. As a versatile full-stack-developer, I have a passion for creating efficient and user-friendly web applications. I have worked with a variety of languages and technologies including Java, Python, JavaScript, Node.js, React.js, MongoDB, and more.  My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active with sports, playing poker, and exploring new technologies.";
 
+export const SKILLS = [
+  { language: "Java", frameworks: ["Spring Boot", "Java EE"] },
+  {
+    language: "Python",
+    frameworks: ["Pandas", "TensorFlow", "Scikit-learn", "NumPy"],
+  },
+  {
+    language: "JavaScript",
+    frameworks: ["Node.js", "Express.js", "React.js", "Next.js", "jQuery"],
+  },
+  {
+    language: "C++",
+    frameworks: [],
+  },
+  {
+    language: "HTML/CSS",
+    frameworks: ["Bootstrap", "Tailwind"],
+  },
+  {
+    language: "SQL/MQL",
+    frameworks: ["PostgreSQL", "MongoDB"],
+  },
+];
+
 export const EXPERIENCES = [
   {
     year: "May 2024 - August 2024",
