@@ -8,6 +8,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: "DM Sans", sans-serif;
+  /* font-family: "DM Sans", sans-serif; */
   scroll-behavior: smooth;
+  font-family: Calibri, sans-serif;
 }

@@ -37,11 +37,13 @@ const Navbar = () => {
       }`}
     >
       <div className="flex flex-shrink-0 items-center">
-        <img
-          className={`mx-2 h-7 duration-700 ${scrolled ? "invert" : ""}`}
-          src={logo}
-          alt=""
-        />
+        <a href="#home">
+          <img
+            className={`mx-2 h-7 duration-700 ${scrolled ? "invert" : ""}`}
+            src={logo}
+            alt=""
+          />
+        </a>
       </div>
       <button>
         <FaBars
@@ -73,11 +75,7 @@ const Navbar = () => {
           }`}
         >
           <li>
-            <a
-              href="#about"
-              onClick={toggleMenu}
-              className="hover:font-black duration-1000 transition-all"
-            >
+            <a href="#about" onClick={toggleMenu} className="hover:font-black">
               ABOUT
             </a>
           </li>
@@ -116,9 +114,9 @@ const Navbar = () => {
         </ul>
         <div
           className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 duration-1000 sm:w-28 ${
-            menuOpen || !scrolled
+            !scrolled
               ? "bg-white text-black border-black border-2"
-              : "md:bg-black md:text-white md:border-white border-2"
+              : "bg-black text-white border-white border-2"
           }`}
         >
           <a
