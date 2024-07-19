@@ -37,7 +37,7 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: -100 }}
       transition={{ duration: 0.5 }}
-      className={`flex items-center z-40 justify-between fixed w-full top-0 left-0 px-6 lg:px-16 xl:px-24 duration-1000 ${
+      className={`flex items-center z-40 justify-between fixed w-full top-0 left-0 px-6 lg:px-16 xl:px-24 duration-500 ${
         scrolled ? "bg-zinc-300 py-2 md:py-0" : "bg-transparent py-6"
       }`}
     >
@@ -68,7 +68,7 @@ const Navbar = () => {
       </button>
 
       <div
-        className={`border-y-2 md:border-none border-white text-xl md:text-base flex gap-3 md:gap-4 fixed md:static flex-col md:flex-row flex-shrink-0 w-screen md:w-auto left-0 items-center py-4 md:py-auto duration-200 md:opacity-100 ${
+        className={`border-y-2 md:border-none border-white text-xl md:text-base flex gap-3 md:gap-4 fixed md:static flex-col md:flex-row flex-shrink-0 w-screen md:w-auto left-0 items-center py-4 md:py-auto duration-500 md:duration-200 md:opacity-100 ${
           menuOpen ? "opacity-[.97]" : "opacity-0"
         } ${
           scrolled
@@ -77,7 +77,7 @@ const Navbar = () => {
         } `}
       >
         <ul
-          className={`flex items-center justify-center gap-2 font-sans font-bold duration-0 flex-col md:flex-row md:gap-4 ${
+          className={`flex items-center justify-center gap-2 font-sans font-bold flex-col md:flex-row md:gap-4 ${
             scrolled ? "text-black" : ""
           }`}
         >
@@ -86,7 +86,7 @@ const Navbar = () => {
               <a
                 href={tab.href}
                 onClick={toggleMenu}
-                className="inline-block hover:scale-105 duration-200 hover:text-red-500 tracking-wide text-2xl md:text-xl"
+                className="inline-block hover:scale-105 duration-200 hover:text-red-500 tracking-wide text-lg md:text-xl"
               >
                 {tab.tabName}
               </a>
@@ -95,9 +95,7 @@ const Navbar = () => {
         </ul>
         <div
           className={`flex items-center justify-center gap-4 text-lg rounded-full p-1.5 duration-200 sm:w-28 hover:scale-105 ${
-            !scrolled
-              ? "bg-white text-black border-black border-2"
-              : "bg-black text-white border-white border-2"
+            !scrolled ? "bg-white text-black " : "bg-black text-white "
           }`}
         >
           <a

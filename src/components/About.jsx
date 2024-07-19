@@ -24,7 +24,7 @@ const About = () => {
             <img
               src={aboutImg}
               alt=""
-              className="rounded-full border-8 w-72 md:w-96 md:mb-10 lg:w-96"
+              className="rounded-full border-8 w-72 mb-10 md:mb-0 md:w-96 lg:w-96"
             />
           </div>
         </motion.div>
@@ -35,7 +35,7 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="max-w-xl sm:text-lg leading-[19px] md:text-xl pt-10 text-center 2xl:py-8">
+            <p className="max-w-xl sm:text-lg leading-[19px] md:text-xl text-center md:text-start 2xl:py-8">
               {ABOUT_TEXT}
             </p>
           </div>

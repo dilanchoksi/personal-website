@@ -10,5 +10,6 @@
 :root {
   font-family: "DM Sans", sans-serif;
   scroll-behavior: smooth;
+  background-color: black;
   /* font-family: Calibri, sans-serif; */
 }
