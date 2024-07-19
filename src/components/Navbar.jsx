@@ -79,12 +79,20 @@ const Navbar = () => {
           }`}
         >
           <li>
-            <a href="#about" onClick={toggleMenu} className="hover:font-black">
+            <a
+              href="#about"
+              onClick={toggleMenu}
+              className="inline-block hover:scale-105 duration-200 hover:text-purple-900 tracking-wide text-2xl md:text-xl"
+            >
               ABOUT
             </a>
           </li>
           <li>
-            <a href="#skills" onClick={toggleMenu} className="hover:font-black">
+            <a
+              href="#skills"
+              onClick={toggleMenu}
+              className="inline-block hover:scale-105 duration-200 hover:text-red-900 tracking-wide text-2xl md:text-xl"
+            >
               SKILLS
             </a>
           </li>
@@ -92,7 +100,7 @@ const Navbar = () => {
             <a
               href="#experience"
               onClick={toggleMenu}
-              className="hover:font-black"
+              className="inline-block hover:scale-105 duration-200 hover:text-blue-900 tracking-wide text-2xl md:text-xl"
             >
               EXPERIENCE
             </a>
@@ -101,7 +109,7 @@ const Navbar = () => {
             <a
               href="#projects"
               onClick={toggleMenu}
-              className="hover:font-black"
+              className="inline-block hover:scale-105 duration-200 hover:text-green-900 tracking-wide text-2xl md:text-xl"
             >
               PROJECTS
             </a>
@@ -110,7 +118,7 @@ const Navbar = () => {
             <a
               href="#contact"
               onClick={toggleMenu}
-              className="hover:font-black"
+              className="inline-block hover:scale-105 duration-200 hover:text-yellow-700 tracking-wide text-2xl md:text-xl"
             >
               CONTACT
             </a>

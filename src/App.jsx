@@ -23,6 +23,9 @@ const App = () => {
         <Experience />
         <Projects />
         <Contact />
+        <div className="text-center">
+          <footer className="p-5">Built from scratch by Dilan Choksi</footer>
+        </div>
       </div>
     </div>
   );

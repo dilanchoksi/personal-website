@@ -30,7 +30,7 @@ const Languages = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1.5 }}
-        className="flex flex-wrap items-start justify-center gap-4"
+        className="flex flex-wrap items-start justify-center gap-16"
       >
         {SKILLS.map((skill, index) => (
           <motion.div
@@ -38,14 +38,14 @@ const Languages = () => {
             initial="initial"
             animate="animate"
             key={index}
-            className="text-center tracking-wide font-extralight"
+            className="text-center group"
           >
-            <h1 class="cursor-default bg-neutral-800 border-2 rounded-xl mb-2  p-4 text-3xl tracking-wide font-bold hover:invert">
+            <h1 class="cursor-default border-b-2 mb-5 rounded-lg border-zinc-700 p-3 text-3xl tracking-wide font-bold duration-100 group-hover:border-white group-hover:scale-110">
               {skill.language}
             </h1>
             {skill.frameworks.map((framework) => (
               <div>
-                <p className="inline-block mb-2 cursor-default mr-2 rounded w-auto bg-neutral-900 px-2 py-1 text-sm font-medium text-yellow-600 hover:text-neutral-900 hover:bg-yellow-600">
+                <p className="inline-block mb-2 cursor-default mr-2 rounded w-auto bg-neutral-900 px-2 py-1 text-sm font-medium text-yellow-600 group-hover:text-neutral-900 group-hover:bg-yellow-600 duration-100 group-hover:scale-110">
                   {framework}
                 </p>
               </div>

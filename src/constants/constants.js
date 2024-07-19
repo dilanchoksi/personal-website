@@ -9,7 +9,7 @@ export const ABOUT_TEXT =
   "I am an undergraduate student studying Computer Science and Statistics at the University of Illinois Urbana-Champaign. As a versatile full-stack-developer, I have a passion for creating efficient and user-friendly web applications. I have worked with a variety of languages and technologies including Java, Python, JavaScript, Node.js, React.js, MongoDB, and more.  My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active with sports, playing poker, and exploring new technologies.";
 
 export const SKILLS = [
-  { language: "Java", frameworks: ["Spring Boot", "Java EE"] },
+  { language: "Java", frameworks: ["Spring Boot", "Java EE", "Jackson"] },
   {
     language: "Python",
     frameworks: ["Pandas", "TensorFlow", "Scikit-learn", "NumPy"],
@@ -35,62 +35,81 @@ export const SKILLS = [
 export const EXPERIENCES = [
   {
     year: "May 2024 - August 2024",
-    role: "Software Innovation Intern",
+    role: "Software Engineer Intern",
     company: "Wakefern Food Corporation",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    description: `Interned in the Tech division's Supply Chain Innovation dept.`,
+    technologies: [
+      "Java",
+      "JavaScript",
+      "SQL",
+      "Spring Boot (Java EE)",
+      "Jackson",
+      "Node.js",
+      "Express.js",
+      "Axios",
+      "Prometheus",
+      "Apache HTTP",
+      "Podman",
+      "HTML/CSS",
+    ],
   },
   {
     year: "August 2023 - December 2023",
     role: "Software Engineer",
     company: "Project: Code",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    description: `Contributed to the development of temperature prediction AI.`,
+    technologies: ["Python", "Scikit-learn", "Pandas"],
   },
   {
     year: "Febraury 2022 - November 2022",
     role: "Code Instructor",
     company: "Code Ninjas",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    description: `Taught various applications of JavaScript, Java, and Python to students, maintaining a project-based learning environment.`,
+    technologies: ["JavaScript", "Java", "Python"],
   },
   {
     year: "September 2019 - June 2022",
     role: "Software Engineer",
     company: "First Robotics Compeition Team 75",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
+    description: `Utilized the ROSJava framework to implement service calls and node management between robot modules. Also leveraged Java’s Apache Commons Math library for path planning, trajectory generation, and obstacle avoidance.`,
+    technologies: ["Java", "ROSJava", "Apache Commons Math"],
   },
 ];
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Personal Website",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Personal website for my portfolio made using React.js, Vue.js, Tailwind CSS and the Framer Motion library.",
+    technologies: [
+      "JavaScript",
+      "Vue.js",
+      "React.js",
+      "Tailwind",
+      "Framer Motion",
+      "HTML/CSS",
+    ],
   },
   {
-    title: "Task Management App",
+    title: "CS 124 - Courseable",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "A full-stack Android app for browsing courses throughout UIUC.",
+    technologies: ["Java", "Android SDK"],
   },
   {
-    title: "Portfolio Website",
+    title: "DiamondAlysis",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "A research project using exploratory data analysis and machine learning to explore the valuation metrics of diamonds.",
+    technologies: ["Python", "Pandas", "Matplotlib", "Scikit-learn"],
   },
   {
-    title: "Blogging Platform",
+    title: "Expense Tracker",
     image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+    description: "A full-stack expense tracker built with the MERN stack.",
+    technologies: ["<insert techs here>"],
   },
 ];
 
