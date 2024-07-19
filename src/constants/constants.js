@@ -3,6 +3,14 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
+export const NAVBAR_TABS = [
+  { tabName: "About", href: "#about" },
+  { tabName: "Skills", href: "#skills" },
+  { tabName: "Experience", href: "#experience" },
+  { tabName: "Projects", href: "#projects" },
+  { tabName: "Contact", href: "#contact" },
+];
+
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
 export const ABOUT_TEXT =
