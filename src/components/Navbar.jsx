@@ -68,7 +68,7 @@ const Navbar = () => {
       </button>
 
       <div
-        className={`border-y-2 rounded-bl-[50px] border-none opacity-[.97] text-xl md:text-base flex gap-3 md:gap-4 fixed md:static flex-col md:flex-row flex-shrink-0 w-40 md:w-auto items-center py-4 md:py-auto duration-500 md:duration-200 md:opacity-100 ${
+        className={`rounded-bl-2xl border-none opacity-[.97] text-xl md:text-base flex gap-3 md:gap-4 fixed md:static flex-col md:flex-row flex-shrink-0 w-40 md:w-auto items-center py-4 md:py-auto duration-500 md:duration-200 md:opacity-100 ${
           menuOpen ? "right-0" : "-right-40"
         }  ${
           scrolled
@@ -82,7 +82,7 @@ const Navbar = () => {
           }`}
         >
           {NAVBAR_TABS.map((tab, index) => (
-            <li>
+            <li key={index}>
               <a
                 href={tab.href}
                 onClick={toggleMenu}
