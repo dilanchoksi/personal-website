@@ -3,9 +3,9 @@ import { SKILLS } from "../constants/constants";
 import { motion } from "framer-motion";
 
 const iconVariants = (duration) => ({
-  initial: { y: -2 },
+  initial: { y: -10 },
   animate: {
-    y: [2, -2],
+    y: [10, -10],
     transition: {
       duration: duration,
       ease: "linear",
@@ -22,6 +22,7 @@ const Languages = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="my-20 text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 via-pink-400 to-blue-600 text-transparent bg-clip-text p-1"
       >
         Languages
@@ -30,6 +31,7 @@ const Languages = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1.5 }}
+        viewport={{ once: true }}
         className="flex flex-wrap items-start justify-center gap-16"
       >
         {SKILLS.map((skill, index) => (
