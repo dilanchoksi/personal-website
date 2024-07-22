@@ -86,7 +86,7 @@ const Navbar = () => {
               <a
                 href={tab.href}
                 onClick={toggleMenu}
-                className="inline-block hover:scale-105 duration-200 hover:text-red-500 tracking-wide text-lg md:text-xl"
+                className="inline-block transition-transform duration-200 hover:scale-110 hover:text-red-500 tracking-wide text-lg md:text-xl"
               >
                 {tab.tabName}
               </a>

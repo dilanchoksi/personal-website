@@ -100,10 +100,9 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "CS 124 - Courseable",
+    title: "CopyGPT",
     image: project2,
-    description:
-      "A full-stack Android app for browsing courses throughout UIUC.",
+    description: "A ChatGPT-esque chatbot built with OpenAI's API.",
     technologies: ["Java", "Android SDK"],
   },
   {
