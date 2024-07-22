@@ -68,9 +68,9 @@ const Navbar = () => {
       </button>
 
       <div
-        className={`border-y-2 md:border-none border-white text-xl md:text-base flex gap-3 md:gap-4 fixed md:static flex-col md:flex-row flex-shrink-0 w-screen md:w-auto left-0 items-center py-4 md:py-auto duration-500 md:duration-200 md:opacity-100 ${
-          menuOpen ? "opacity-[.97]" : "opacity-0"
-        } ${
+        className={`border-y-2 rounded-bl-[50px] border-none opacity-[.97] text-xl md:text-base flex gap-3 md:gap-4 fixed md:static flex-col md:flex-row flex-shrink-0 w-40 md:w-auto items-center py-4 md:py-auto duration-500 md:duration-200 md:opacity-100 ${
+          menuOpen ? "right-0" : "-right-40"
+        }  ${
           scrolled
             ? "top-11 bg-zinc-300 md:bg-transparent"
             : "top-[76px] text-white bg-black md:bg-transparent"
