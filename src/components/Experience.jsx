@@ -21,9 +21,11 @@ const Experience = () => {
             initial={{ opacity: 0, y: -100 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="w-full lg:w-1/4"
+            className="w-full lg:w-1/4 lg:mr-10"
           >
-            <p className="mb-2">{experience.year}</p>
+            <p className="mb-2 lg:text-center text-neutral-300 font-bold">
+              {experience.year}
+            </p>
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
@@ -32,14 +34,15 @@ const Experience = () => {
             viewport={{ once: true }}
             className="w-full max-w-xl lg:w-3/4"
           >
-            <h6 className="mb-2 font-semibold">
-              {experience.role} - {experience.company}
+            <h6 className="font-bold text-xl text-red-400">
+              {experience.company}
             </h6>
-            <p className="mb-4 text-neutral-400">{experience.description}</p>
+            <h6 className="mb-2 text-lg">{experience.role}</h6>
+            <p className="mb-4 text-neutral-300">{experience.description}</p>
             {experience.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="cursor-default mr-2 rounded inline-block bg-neutral-900 px-2 py-1 mb-2 text-sm font-medium text-yellow-600 hover:text-neutral-900 hover:bg-yellow-600"
+                className="cursor-default mr-2 rounded inline-block bg-neutral-900 px-2 py-1 mb-2 text-sm font-medium text-yellow-600"
               >
                 {tech}
               </span>

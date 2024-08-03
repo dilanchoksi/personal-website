@@ -24,12 +24,14 @@ const Projects = () => {
               initial={{ opacity: 0, y: -100 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="w-full lg:w-1/4 lg:flex lg:justify-end mr-16"
+              className="w-full lg:w-1/4 lg:flex lg:justify-end mr-20"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="mb-6 rounded border-[1px] border-pink-100 h-36"
+                width={150}
+                height={150}
+                className="mb-6 rounded-2xl border-[1px] border-white h-36"
               />
             </motion.div>
             <motion.div
@@ -39,12 +41,32 @@ const Projects = () => {
               viewport={{ once: true }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
-              <p className="mb-4 text-neutral-400">{project.description}</p>
+              <div className="flex gap-4 mb-4">
+                <h6 className="font-bold text-xl">{project.title}</h6>
+                <div className="flex gap-2">
+                  {project.web && (
+                    <a
+                      href={project.web}
+                      target="_blank"
+                      className="bg-blue-800 rounded-xl text-xs p-1 font-black border-white border-2 hover:scale-105 inline-block duration-100"
+                    >
+                      Website
+                    </a>
+                  )}
+                  <a
+                    href={project.gh}
+                    target="_blank"
+                    className="bg-[#7C007C] rounded-xl text-xs p-1 font-black border-white border-2 hover:scale-105 inline-block duration-100"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+              <p className="mb-4 text-neutral-300">{project.description}</p>
               {project.technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="cursor-default mr-2 rounded inline-block bg-neutral-900 mb-2 px-2 py-1 text-sm font-medium text-yellow-600 hover:text-neutral-900 hover:bg-yellow-600"
+                  className="cursor-default mr-2 rounded inline-block bg-neutral-900 mb-2 px-2 py-1 text-sm font-medium text-yellow-600"
                 >
                   {tech}
                 </span>
