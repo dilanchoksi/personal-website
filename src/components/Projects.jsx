@@ -1,6 +1,9 @@
 import { PROJECTS } from "../constants/constants";
 import { motion } from "framer-motion";
 
+//DEMO button OnHover: "Coming soon... Production deployment in progress. For now, check out the GitHub repository for the source code! :)"
+//Insert video preview??
+
 const Projects = () => {
   return (
     <div id="projects" className="border-b border-slate-800 pt-1 pb-20">
@@ -19,14 +22,12 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              className="w-full lg:w-1/4 text-center lg:mr-20 lg:flex lg:justify-end"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                width={150}
-                height={150}
-                className="mb-6 rounded border-white border-2"
+                className="mb-6 rounded  border-[1px] border-pink-100 h-36"
               />
             </motion.div>
             <motion.div

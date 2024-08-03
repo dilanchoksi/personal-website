@@ -1,7 +1,7 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project1 from "../assets/projects/i-cap.png";
+import project2 from "../assets/projects/m-cap.png";
+import project3 from "../assets/projects/d-cap.jpg";
+import project4 from "../assets/projects/p-cap.png";
 
 export const NAVBAR_TABS = [
   { tabName: "About", href: "#about" },
@@ -76,7 +76,7 @@ export const EXPERIENCES = [
     technologies: ["JavaScript", "Java", "Python"],
   },
   {
-    year: "September 2019 - June 2022",
+    year: "September 2021 - June 2022",
     role: "Software Engineer",
     company: "First Robotics Compeition Team 75",
     description: `Utilized the ROSJava framework to implement service calls and node management between robot modules. Also leveraged Java’s Apache Commons Math library for path planning, trajectory generation, and obstacle avoidance.`,
@@ -86,25 +86,30 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "Personal Website",
+    title: "InterView AI",
     image: project1,
-    description:
-      "Personal website for my portfolio made using React.js, Vue.js, Tailwind CSS and the Framer Motion library.",
+    description: "An AI-powered mock interview simulator.",
     technologies: [
-      "JavaScript",
-      "Vue.js",
+      "Next.js",
       "React.js",
+      "Google Gemini API",
+      "Neon Serverless Postgres",
+      "Drizzle ORM",
       "Tailwind",
-      "Framer Motion",
-      "HTML/CSS",
+      "Clerk Authentication",
     ],
   },
   {
-    title: "CS 124 - Courseable",
+    title: "MoneyMap",
     image: project2,
-    description:
-      "A full-stack Android app for browsing courses throughout UIUC.",
-    technologies: ["Java", "Android SDK"],
+    description: "A full-stack expense tracker built with MERN.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Clerk Authentication",
+    ],
   },
   {
     title: "DiamondAlysis",
@@ -114,10 +119,11 @@ export const PROJECTS = [
     technologies: ["Python", "Pandas", "Matplotlib", "Scikit-learn"],
   },
   {
-    title: "Expense Tracker",
+    title: "Personal Website",
     image: project4,
-    description: "A full-stack expense tracker built with the MERN stack.",
-    technologies: ["<insert techs here>"],
+    description:
+      "The website you're looking at! Built to showcase my professional life.",
+    technologies: ["React.js", "Tailwind", "Framer Motion", "HTML/CSS"],
   },
 ];
 
