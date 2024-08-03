@@ -9,6 +9,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="mt-20 mb-10 text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-pink-400 to-orange-600 text-transparent bg-clip-text p-1"
       >
         Get in Touch
@@ -19,6 +20,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: -15 }}
           transition={{ duration: 1 }}
           href="https://www.linkedin.com/in/dilanchoksi/"
+          viewport={{ once: true }}
           className="flex items-center justify-center gap-3 text-lg rounded-full p-1.5 bg-[#004182] w-32 mx-auto border-2 border-white"
           target="_blank"
         >
@@ -30,6 +32,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -15 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
         className="my-2 text-xl text-center"
       >
         {CONTACT.email} • {CONTACT.phoneNo}

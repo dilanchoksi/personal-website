@@ -10,6 +10,7 @@ const Projects = () => {
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="my-20 text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 via-pink-400 to-blue-600 text-transparent bg-clip-text p-1"
       >
@@ -22,18 +23,20 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/4 text-center lg:mr-20 lg:flex lg:justify-end"
+              viewport={{ once: true }}
+              className="w-full lg:w-1/4 lg:flex lg:justify-end mr-16"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="mb-6 rounded  border-[1px] border-pink-100 h-36"
+                className="mb-6 rounded border-[1px] border-pink-100 h-36"
               />
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 1 }}
+              viewport={{ once: true }}
               className="w-full max-w-xl lg:w-3/4"
             >
               <h6 className="mb-2 font-semibold">{project.title}</h6>

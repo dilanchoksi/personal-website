@@ -102,14 +102,9 @@ export const PROJECTS = [
   {
     title: "MoneyMap",
     image: project2,
-    description: "A full-stack expense tracker built with MERN.",
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Clerk Authentication",
-    ],
+    description:
+      "A full-stack Android app for browsing courses throughout UIUC.",
+    technologies: ["Java", "Android SDK"],
   },
   {
     title: "DiamondAlysis",
