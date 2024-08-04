@@ -33,9 +33,8 @@ const Skills = () => {
       >
         Skills
       </motion.h2>
-      <h6 className="text-center mb-14 text-neutral-500">
-        <span className="text-white">Hover</span> and{" "}
-        <span className="text-red-500">Click</span> on skills to interact
+      <h6 className="text-center mb-14 text-neutral-600">
+        Hover and Click on skills to interact
       </h6>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
@@ -54,8 +53,12 @@ const Skills = () => {
           >
             <h1
               data-key={index}
-              className={`cursor-pointer border-2 mb-5 rounded-lg border-zinc-700 p-3 text-3xl tracking-wide font-bold duration-100 hover:border-white hover:scale-110
-              ${lockedIdx == index ? "border-red-500 scale-110" : ""}
+              className={`cursor-pointer border-2 mb-5 rounded-lg  p-3 text-3xl tracking-wide font-bold duration-100 hover:border-white hover:scale-110
+              ${
+                lockedIdx == index
+                  ? "border-red-500 scale-110"
+                  : "border-zinc-700"
+              }
                 `}
               onMouseOver={() => {
                 if (locked) {
