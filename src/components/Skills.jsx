@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SKILLS } from "../constants/constants";
 
 import { motion } from "framer-motion";
@@ -15,18 +16,27 @@ const iconVariants = (duration) => ({
   },
 });
 
-const Languages = () => {
+const Skills = () => {
+  const [currSkill, setCurrSkill] = useState(null);
+  const [locked, setLocked] = useState(false);
+  const [lockedIdx, setLockedIdx] = useState(null);
+  const [display, setDisplay] = useState(false);
+
   return (
-    <div id="skills" className="border-b border-slate-800 pt-1 pb-20">
+    <div id="skills" className="border-b border-slate-800 pt-1 pb-20 h-[50vh]">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="my-20 text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 via-pink-400 to-blue-600 text-transparent bg-clip-text p-1"
+        className="mt-20 mb-10 text-center text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 via-pink-400 to-blue-600 text-transparent bg-clip-text p-1"
       >
         Skills
       </motion.h2>
+      <h6 className="text-center mb-14 text-neutral-500">
+        <span className="text-white">Hover</span> and{" "}
+        <span className="text-red-500">Click</span> on skills to interact
+      </h6>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
@@ -42,21 +52,49 @@ const Languages = () => {
             key={index}
             className="text-center group"
           >
-            <h1 class="cursor-default border-b-2 mb-5 rounded-lg border-zinc-700 p-3 text-3xl tracking-wide font-bold duration-100 group-hover:border-white group-hover:scale-110">
+            <h1
+              data-key={index}
+              className={`cursor-pointer border-2 mb-5 rounded-lg border-zinc-700 p-3 text-3xl tracking-wide font-bold duration-100 hover:border-white hover:scale-110
+              ${lockedIdx == index ? "border-red-500 scale-110" : ""}
+                `}
+              onMouseOver={() => {
+                if (locked) {
+                } else {
+                  setCurrSkill(skill);
+                  setDisplay(true);
+                }
+              }}
+              onMouseOut={() => {
+                locked ? {} : setDisplay(false);
+              }}
+              onClick={() => {
+                if (index == lockedIdx) {
+                  setLocked(false);
+                  setLockedIdx(null);
+                } else {
+                  setLocked(true);
+                  setCurrSkill(skill);
+                  setLockedIdx(index);
+                }
+              }}
+            >
               {skill.language}
             </h1>
-            {skill.frameworks.map((framework) => (
-              <div>
-                <p className="inline-block mb-2 cursor-default mr-2 rounded w-auto bg-neutral-900 px-2 py-1 text-sm font-medium text-yellow-600 group-hover:text-neutral-900 group-hover:bg-yellow-600 duration-100 group-hover:scale-110">
-                  {framework}
-                </p>
-              </div>
-            ))}
           </motion.div>
         ))}
       </motion.div>
+
+      <div
+        className={`flex gap-10 justify-center mt-10 font-bold text-2xl text-red-500 duration-500 ${
+          display ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        {currSkill?.frameworks.map((framework, index) => (
+          <p key={index}>{framework}</p>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Languages;
+export default Skills;

@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Languages from "./components/Skills";
+import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -19,7 +20,7 @@ const App = () => {
         <Navbar />
         <Hero />
         <About />
-        <Languages />
+        <Skills />
         <Experience />
         <Projects />
         <Contact />

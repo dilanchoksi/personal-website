@@ -13,3 +13,12 @@
   background-color: black;
   /* font-family: Calibri, sans-serif; */
 }
+
+@keyframes shine {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}

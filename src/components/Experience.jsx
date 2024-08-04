@@ -34,7 +34,7 @@ const Experience = () => {
             viewport={{ once: true }}
             className="w-full max-w-xl lg:w-3/4"
           >
-            <h6 className="font-bold text-xl text-red-400">
+            <h6 className="font-bold text-xl text-red-500">
               {experience.company}
             </h6>
             <h6 className="mb-2 text-lg">{experience.role}</h6>
