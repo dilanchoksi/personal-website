@@ -53,10 +53,10 @@ const Skills = () => {
           >
             <h1
               data-key={index}
-              className={`cursor-pointer border-2 rounded-lg  p-3 text-3xl tracking-wide font-bold duration-100 hover:border-white hover:scale-105
+              className={`cursor-pointer border-2 rounded-lg  p-3 text-3xl tracking-wide font-bold duration-300 hover:border-white hover:scale-105
               ${
                 lockedIdx == index
-                  ? "border-yellow-600 scale-105"
+                  ? "scale-105 bg-yellow-600"
                   : "border-zinc-700"
               }
                 `}
@@ -88,7 +88,7 @@ const Skills = () => {
       </motion.div>
       <div className="h-12">
         <div
-          className={`flex gap-2 justify-center mt-8 duration-500 flex-wrap ${
+          className={`flex gap-2 justify-center mt-8 duration-300 flex-wrap ${
             display ? "opacity-100" : "opacity-0"
           }`}
         >
