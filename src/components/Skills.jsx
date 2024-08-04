@@ -34,7 +34,7 @@ const Skills = () => {
         Skills
       </motion.h2>
       <h6 className="text-center mb-14 text-neutral-600">
-        Hover and Click on skills to interact
+        Hover/Click on skills to interact
       </h6>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
