@@ -53,10 +53,10 @@ const Skills = () => {
           >
             <h1
               data-key={index}
-              className={`cursor-pointer border-2 mb-5 rounded-lg  p-3 text-3xl tracking-wide font-bold duration-100 hover:border-white hover:scale-110
+              className={`cursor-pointer border-2 mb-5 rounded-lg  p-3 text-3xl tracking-wide font-bold duration-100 hover:border-white hover:scale-105
               ${
                 lockedIdx == index
-                  ? "border-red-500 scale-110"
+                  ? "border-yellow-600 scale-105"
                   : "border-zinc-700"
               }
                 `}

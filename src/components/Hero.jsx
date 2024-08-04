@@ -21,7 +21,7 @@ const Hero = () => {
             animate="visible"
             className="md:pt-10 mb-2 text-6xl font-bold lg:text-8xl"
           >
-            Hi, I'm Dilan Choksi.
+            Hi, I'm Dilan Choksi
           </motion.h1>
           <motion.h2
             variants={container(0.5)}
