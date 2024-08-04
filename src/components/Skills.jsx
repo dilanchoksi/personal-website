@@ -23,7 +23,7 @@ const Skills = () => {
   const [display, setDisplay] = useState(false);
 
   return (
-    <div id="skills" className="border-b border-slate-800 pt-1 pb-20 h-[50vh]">
+    <div id="skills" className="border-b border-slate-800 pt-1 pb-20">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -41,7 +41,7 @@ const Skills = () => {
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="flex flex-wrap items-start justify-center gap-16"
+        className="flex flex-wrap items-start justify-center gap-4"
       >
         {SKILLS.map((skill, index) => (
           <motion.div
@@ -49,7 +49,7 @@ const Skills = () => {
             initial="initial"
             animate="animate"
             key={index}
-            className="text-center group"
+            className="text-center"
           >
             <h1
               data-key={index}
@@ -88,7 +88,7 @@ const Skills = () => {
       </motion.div>
 
       <div
-        className={`flex gap-10 justify-center mt-10 font-bold text-2xl text-red-500 duration-500 ${
+        className={`flex gap-10 justify-center mt-10 h-8 font-bold text-xl md:text-2xl text-red-500 duration-500 ${
           display ? "opacity-100" : "opacity-0"
         }`}
       >
