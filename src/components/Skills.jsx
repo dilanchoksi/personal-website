@@ -4,9 +4,9 @@ import { SKILLS } from "../constants/constants";
 import { motion } from "framer-motion";
 
 const iconVariants = (duration) => ({
-  initial: { y: -2 },
+  initial: { y: -3.5 },
   animate: {
-    y: [2, -2],
+    y: [3.5, -3.5],
     transition: {
       duration: duration,
       ease: "linear",
@@ -23,7 +23,7 @@ const Skills = () => {
   const [display, setDisplay] = useState(false);
 
   return (
-    <div id="skills" className="border-b border-slate-800 pt-1 pb-20">
+    <div id="skills" className="border-b border-slate-800 pt-1 pb-12">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -45,7 +45,7 @@ const Skills = () => {
       >
         {SKILLS.map((skill, index) => (
           <motion.div
-            variants={iconVariants(Math.floor(Math.random() * 5) + 2)}
+            variants={iconVariants(Math.floor(Math.random() * 4) + 3)}
             initial="initial"
             animate="animate"
             key={index}
@@ -53,7 +53,7 @@ const Skills = () => {
           >
             <h1
               data-key={index}
-              className={`cursor-pointer border-2 mb-5 rounded-lg  p-3 text-3xl tracking-wide font-bold duration-100 hover:border-white hover:scale-105
+              className={`cursor-pointer border-2 rounded-lg  p-3 text-3xl tracking-wide font-bold duration-100 hover:border-white hover:scale-105
               ${
                 lockedIdx == index
                   ? "border-yellow-600 scale-105"
@@ -86,9 +86,9 @@ const Skills = () => {
           </motion.div>
         ))}
       </motion.div>
-      <div className="h-8">
+      <div className="h-12">
         <div
-          className={`flex gap-2 justify-center mt-10 duration-500 flex-wrap ${
+          className={`flex gap-2 justify-center mt-8 duration-500 flex-wrap ${
             display ? "opacity-100" : "opacity-0"
           }`}
         >
