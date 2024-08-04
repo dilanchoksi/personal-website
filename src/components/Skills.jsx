@@ -86,15 +86,21 @@ const Skills = () => {
           </motion.div>
         ))}
       </motion.div>
-
-      <div
-        className={`flex gap-10 justify-center mt-10 h-8 font-bold text-xl md:text-2xl text-red-500 duration-500 ${
-          display ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        {currSkill?.frameworks.map((framework, index) => (
-          <p key={index}>{framework}</p>
-        ))}
+      <div className="h-8">
+        <div
+          className={`flex gap-2 justify-center mt-10 duration-500 flex-wrap ${
+            display ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {currSkill?.frameworks.map((framework, index) => (
+            <p
+              className="text-md md:text-xl h-auto rounded px-2 py-1 bg-neutral-900 font-medium text-yellow-600"
+              key={index}
+            >
+              {framework}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
