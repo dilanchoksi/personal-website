@@ -56,7 +56,7 @@ const Skills = () => {
               className={`cursor-pointer border-2 rounded-lg  p-3 text-3xl tracking-wide font-bold duration-300 hover:border-white hover:scale-105
               ${
                 lockedIdx == index
-                  ? "scale-105 bg-yellow-600"
+                  ? "scale-105 bg-neutral-900 text-yellow-600 "
                   : "border-zinc-700"
               }
                 `}
