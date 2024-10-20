@@ -20,7 +20,7 @@ export const SKILLS = [
   { language: "Java", frameworks: ["Spring Boot", "Java EE", "Jackson"] },
   {
     language: "Python",
-    frameworks: ["Pandas", "TensorFlow", "Scikit-learn", "NumPy"],
+    frameworks: ["Pandas", "Scikit-learn", "NumPy"],
   },
   {
     language: "JavaScript",
@@ -42,9 +42,23 @@ export const SKILLS = [
 
 export const EXPERIENCES = [
   {
+    year: "August 2024 \u2192 Present",
+    role: "Software Engineer",
+    company: "SeriesFarm",
+    description: `Developing a full-stack fintech platform to expedite the agricultural grant process`,
+    technologies: [
+      "React",
+      "Django",
+      "MongoDB",
+      "OAuth 2.0",
+      "Open AI API",
+      "Tailwind",
+    ],
+  },
+  {
     year: "May 2024 \u2192 August 2024",
     role: "Software Engineer Intern",
-    company: "Wakefern Food Corp. (ShopRite)",
+    company: "Wakefern Food Corporation (ShopRite)",
     description: `Interned in the Tech division's Supply Chain Innovation dept.`,
     technologies: [
       "Java",
@@ -63,9 +77,9 @@ export const EXPERIENCES = [
   },
   {
     year: "August 2023 \u2192 December 2023",
-    role: "Software Engineer",
-    company: "Project: Code UIUC",
-    description: `Contributed to the development of temperature prediction AI.`,
+    role: "Software Developer",
+    company: "Project Code",
+    description: `Contributed to the development an apartment finder application for students.`,
     technologies: ["Python", "Scikit-learn", "Pandas"],
   },
   {
@@ -73,7 +87,7 @@ export const EXPERIENCES = [
     role: "Code Instructor",
     company: "Code Ninjas",
     description: `Taught various applications of JavaScript, Java, and Python to students, maintaining a project-based learning environment.`,
-    technologies: ["JavaScript", "Java", "Python"],
+    technologies: ["Node.js", "Express.js", "MongoDB", "Axios", "WebSockets"],
   },
   {
     year: "September 2021 \u2192 June 2022",
@@ -135,6 +149,6 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "New York City Metropolitan Area",
-  phoneNo: "908.635.0916",
+  phoneNo: "908-635-0916",
   email: "dilanchoksi@gmail.com",
 };
