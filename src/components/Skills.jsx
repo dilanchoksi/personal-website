@@ -4,9 +4,9 @@ import { SKILLS } from "../constants/constants";
 import { motion } from "framer-motion";
 
 const iconVariants = (duration) => ({
-  initial: { y: -3.5 },
+  initial: { y: -3 },
   animate: {
-    y: [3.5, -3.5],
+    y: [3, -3],
     transition: {
       duration: duration,
       ease: "linear",
@@ -56,7 +56,7 @@ const Skills = () => {
               className={`cursor-pointer border-2 rounded-lg  p-3 text-3xl tracking-wide font-bold duration-300 hover:border-white hover:scale-105
               ${
                 lockedIdx == index
-                  ? "scale-105 bg-yellow-600"
+                  ? "scale-105 bg-neutral-900 text-yellow-600 "
                   : "border-zinc-700"
               }
                 `}
@@ -93,12 +93,15 @@ const Skills = () => {
           }`}
         >
           {currSkill?.frameworks.map((framework, index) => (
-            <p
+            <motion.p
+              variants={iconVariants(Math.floor(Math.random() * 4) + 3)}
+              initial="initial"
+              animate="animate"
               className="text-md md:text-xl h-auto rounded px-2 py-1 bg-neutral-900 font-medium text-yellow-600"
               key={index}
             >
               {framework}
-            </p>
+            </motion.p>
           ))}
         </div>
       </div>

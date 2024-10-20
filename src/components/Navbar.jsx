@@ -68,7 +68,7 @@ const Navbar = () => {
       </button>
 
       <div
-        className={`rounded-bl-2xl border-none opacity-[.97] text-xl md:text-base flex gap-3 md:gap-4 fixed md:static flex-col md:flex-row flex-shrink-0 w-40 md:w-auto items-center py-4 md:py-auto duration-500 md:duration-200 md:opacity-100 ${
+        className={`rounded-bl-2xl border-none opacity-[.97] text-xl md:text-base flex gap-3 md:gap-5 fixed md:static flex-col md:flex-row flex-shrink-0 w-40 md:w-auto items-center py-4 md:py-auto duration-500 md:duration-200 md:opacity-100 ${
           menuOpen ? "right-0" : "-right-40"
         }  ${
           scrolled
@@ -77,7 +77,7 @@ const Navbar = () => {
         } `}
       >
         <ul
-          className={`flex items-center justify-center gap-2 font-sans font-bold flex-col md:flex-row md:gap-4 ${
+          className={`flex items-center justify-center gap-2 flex-col md:flex-row md:gap-4 ${
             scrolled ? "text-black" : ""
           }`}
         >
@@ -86,7 +86,9 @@ const Navbar = () => {
               <a
                 href={tab.href}
                 onClick={toggleMenu}
-                className="inline-block transition-transform duration-200 hover:scale-110 hover:text-red-500 tracking-wide text-lg md:text-xl"
+                className={`inline-block duration-75 hover:scale-105 text-lg ${
+                  scrolled ? "hover:text-red-700" : "hover:text-yellow-400"
+                }`}
               >
                 {tab.tabName}
               </a>
