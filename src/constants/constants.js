@@ -42,20 +42,6 @@ export const SKILLS = [
 
 export const EXPERIENCES = [
   {
-    year: "August 2024 \u2192 Present",
-    role: "Software Engineer",
-    company: "SeriesFarm",
-    description: `Developing a full-stack fintech platform to expedite the agricultural grant process`,
-    technologies: [
-      "React",
-      "Django",
-      "MongoDB",
-      "OAuth 2.0",
-      "Open AI API",
-      "Tailwind",
-    ],
-  },
-  {
     year: "May 2024 \u2192 August 2024",
     role: "Software Engineer Intern",
     company: "Wakefern Food Corporation (ShopRite)",
@@ -73,6 +59,20 @@ export const EXPERIENCES = [
       "Apache HTTP",
       "Docker",
       "HTML/CSS",
+    ],
+  },
+  {
+    year: "January 2024 \u2192 May 2024",
+    role: "Software Engineer",
+    company: "SeriesFarm",
+    description: `Developed a full-stack fintech platform to expedite the agricultural grant process`,
+    technologies: [
+      "React",
+      "Django",
+      "MongoDB",
+      "OAuth 2.0",
+      "Open AI API",
+      "Tailwind",
     ],
   },
   {
